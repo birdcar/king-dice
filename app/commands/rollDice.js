@@ -47,7 +47,7 @@ async function execute(interaction) {
  * @param {number} numSides
  */
 function getRoll(numSides) {
-  return Math.ceil(Math.random() * (numSides - 1) + 1);
+  return Math.ceil(Math.random() * numSides);
 }
 
 module.exports = {
