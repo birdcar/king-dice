@@ -6,6 +6,7 @@ const data = new SlashCommandBuilder()
 
 async function execute(interaction) {
   await interaction.reply({ content: 'PONG!', ephemeral: true });
+  console.log(`Sent ping in ${client.ws.ping}ms`);
 }
 
 module.exports = {
