@@ -18,7 +18,6 @@ async function registerCommands(bot, client) {
     const filePath = path.join(commandsDir, file);
     const command = require(filePath);
     bot.commands.set(command.data.name, command);
-    console.log(bot.commands);
     commands.push(command.data.toJSON());
   }
 
