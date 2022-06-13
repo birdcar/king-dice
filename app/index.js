@@ -4,7 +4,6 @@ const { Client } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { config, utils } = require('../config/app/index');
 const express = require('express');
-const app = require('../config/app/index');
 
 // Create a new client instance
 const api = express();
@@ -27,6 +26,7 @@ api.listen(8080, () => {
 
   bot.on('messageCreate', (message) => {
     console.warn(`${message.author} said ${message.content}.`);
+    console.info(message);
   });
 
   bot.on('interactionCreate', async (interaction) => {
