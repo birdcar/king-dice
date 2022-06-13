@@ -42,7 +42,7 @@ api.listen(8080, () => {
         ephemeral: true,
       });
     });
-    console.info(`Sent response in ${client.ws.ping}ms`);
+    console.info(`Sent response in ${bot.ws.ping}ms`);
   });
 
   // Login to Discord with your client's token
