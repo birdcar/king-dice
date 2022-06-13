@@ -25,6 +25,10 @@ api.listen(8080, () => {
     console.log('Bot Ready!');
   });
 
+  bot.on('messageCreate', (message) => {
+    console.warn(`${message.author} said ${message.content}.`);
+  });
+
   bot.on('interactionCreate', async (interaction) => {
     if (!interaction.isCommand()) return;
     const command = bot.commands.get(interaction.commandName);
