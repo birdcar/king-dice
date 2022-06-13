@@ -1,0 +1,25 @@
+{
+  "name": "king-dice",
+  "version": "1.0.0",
+  "description": "A Discord bot for Lily B Clayton's D&D group",
+  "main": "node index.js",
+  "scripts": {
+    "start": "node app/index.js"
+  },
+  "keywords": [],
+  "author": "Nick Cannariato <devrel@birdcar.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/builders": "^0.15.0",
+    "@discordjs/rest": "^0.5.0",
+    "better-sqlite3": "^7.5.3",
+    "discord-api-types": "^0.33.5",
+    "discord.js": "^13.8.0",
+    "dotenv": "^16.0.1",
+    "knex": "^2.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^8.17.0"
+  }
+}
