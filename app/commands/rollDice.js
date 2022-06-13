@@ -16,14 +16,18 @@ async function execute(interaction) {
   const input = interaction.options.getString('dice').trim().split(' ');
   const output = [];
 
-  for (roll of input) {
-    const [num, sides] = roll.split('d').map(num => parseInt(num));
+  for (const roll of input) {
+    let [num, sides] = roll.split('d').map((n) => parseInt(n));
 
     if (num === 0) {
       await interaction.reply(
         `You can't roll 0 d${sides}! Try again please :bow:`
       );
       return;
+    }
+
+    if (!num) {
+      num = 1;
     }
 
     let start = 0;
